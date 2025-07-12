@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8080', // 🔥 CHÍNH XÁC LÀ BACKEND BẠN
+        target: 'https://mailflow-backend-mj3r.onrender.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api'), // ⚠️ KHÔNG XÓA /api
       },
